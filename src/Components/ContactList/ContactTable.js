@@ -40,7 +40,11 @@ export default function ContactTable(props) {
 						)}
 						<tr>
 							<td colSpan={maxColumnSpan} className="align-contents">
-								<Button variant="primary" className="px-4" href="/addContact">
+								<Button
+									variant="primary"
+									className="px-4"
+									href="/TSACodingChallengeReactApp/#/addContact"
+								>
 									Add new contact
 								</Button>
 							</td>
