@@ -8,7 +8,7 @@ import ContactTable from "./ContactTable";
 function ContactList(props) {
 	let fetchResponse;
 	if (props.apiEndpoint) {
-		fetchResponse = apiService.useFetch(props.apiEndpoint, {
+		fetchResponse = apiService.useFetchContacts(props.apiEndpoint, {
 			isLoading: true,
 			data: null,
 		});

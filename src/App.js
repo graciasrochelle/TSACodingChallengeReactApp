@@ -15,7 +15,6 @@ function App() {
 					<Route exact path="/">
 						<ContactList apiEndpoint={`/contacts`} />
 					</Route>
-					<Route path="/contactDetails">Hello</Route>
 					<Route path="*">
 						<NoMatch />
 					</Route>
