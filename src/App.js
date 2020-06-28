@@ -16,7 +16,7 @@ function App() {
 					<Route exact path="/">
 						<ContactList apiEndpoint={`/`} />
 					</Route>
-					<Route path="/addContact">
+					<Route exact path="/addContact">
 						<AddContact apiEndpoint={`/contact`} />
 					</Route>
 					<Route path="*">
