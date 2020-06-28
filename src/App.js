@@ -13,10 +13,10 @@ function App() {
 			<Header />
 			<div className="content">
 				<Switch>
-					<Route exact path="/contacts">
+					<Route exact path="/">
 						<ContactList apiEndpoint={`/`} />
 					</Route>
-					<Route path="/addContact">
+					<Route exact path="/addContact">
 						<AddContact apiEndpoint={`/contact`} />
 					</Route>
 					<Route path="*">
