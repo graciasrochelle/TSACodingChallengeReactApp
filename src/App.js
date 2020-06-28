@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ContactList from "./Components/ContactList/ContactList";
 import NoMatch from "./Components/NoMatch";
+import AddContact from "./Components/AddContact";
 
 function App() {
 	return (
@@ -12,8 +13,11 @@ function App() {
 			<Header />
 			<div className="content">
 				<Switch>
-					<Route exact path="/">
-						<ContactList apiEndpoint={`/contacts`} />
+					<Route exact path="/contacts">
+						<ContactList apiEndpoint={`/`} />
+					</Route>
+					<Route path="/addContact">
+						<AddContact apiEndpoint={`/contact`} />
 					</Route>
 					<Route path="*">
 						<NoMatch />

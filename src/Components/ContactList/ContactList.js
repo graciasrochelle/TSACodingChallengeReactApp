@@ -2,7 +2,6 @@ import React from "react";
 import "./ContactList.css";
 import Loader from "../Loader/Loader";
 import * as apiService from "../../apiService";
-import { mockData } from "./mockData";
 import ContactTable from "./ContactTable";
 
 function ContactList(props) {
@@ -14,16 +13,15 @@ function ContactList(props) {
 		});
 	}
 
-	if (fetchResponse && fetchResponse.isLoading && !fetchResponse.data) {
+	if (fetchResponse && fetchResponse.isLoading) {
 		return <Loader />;
 	}
 
-	const contactList =
-		fetchResponse && fetchResponse.data && !fetchResponse.isLoading
-			? fetchResponse.data
-			: mockData;
-
-	return !fetchResponse.isLoading && <ContactTable data={contactList} />;
+	return (
+		fetchResponse &&
+		fetchResponse.data &&
+		!fetchResponse.isLoading && <ContactTable data={fetchResponse.data} />
+	);
 }
 
 export default ContactList;

@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import "./ContactList.css";
 import { Button, Alert } from "react-bootstrap";
 
 export default function ContactTable(props) {
@@ -19,11 +20,13 @@ export default function ContactTable(props) {
 					</thead>
 					<tbody>
 						{rows && rows.length > 0 ? (
-							rows.map((r) => (
+							rows.map((r, i) => (
 								<tr key={r.id}>
-									<td key={r.fullName}>{r.fullName}</td>
-									<td key={r.email}>{r.email ? r.email : "---"}</td>
-									<td key={r.phoneNumbers}>{r.phoneNumbers.join(" || ")}</td>
+									<td key={i}>{r.fullName}</td>
+									<td key={i}>{r.email ? r.email : "---"}</td>
+									<td key={i}>
+										{r.phoneNumbers && r.phoneNumbers.join(" || ")}
+									</td>
 								</tr>
 							))
 						) : (
@@ -36,8 +39,8 @@ export default function ContactTable(props) {
 							</tr>
 						)}
 						<tr>
-							<td colspan={maxColumnSpan}>
-								<Button variant="primary" className="px-4">
+							<td colSpan={maxColumnSpan} className="align-contents">
+								<Button variant="primary" className="px-4" href="/addContact">
 									Add new contact
 								</Button>
 							</td>
