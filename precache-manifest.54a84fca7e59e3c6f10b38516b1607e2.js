@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d88d90acee5d493288ba8a17f0665b2f",
+    "revision": "98cd1a1373a2d242fa77cb4145da305b",
     "url": "/TSACodingChallengeReactApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TSACodingChallengeReactApp/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "b7cbcfac51b5194d0755",
+    "revision": "95822e93bd17243fc219",
     "url": "/TSACodingChallengeReactApp/static/css/main.41a706b1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TSACodingChallengeReactApp/static/js/2.361c9942.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b7cbcfac51b5194d0755",
-    "url": "/TSACodingChallengeReactApp/static/js/main.64423f90.chunk.js"
+    "revision": "95822e93bd17243fc219",
+    "url": "/TSACodingChallengeReactApp/static/js/main.db171fdc.chunk.js"
   },
   {
     "revision": "fd07d34345dbc7fd7272",
