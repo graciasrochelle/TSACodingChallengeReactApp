@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TSACodingChallengeReactApp/precache-manifest.edd92c016c76e07299639a30434558d1.js"
+  "/TSACodingChallengeReactApp/precache-manifest.25f74b452c04d71721bce916f1c6dbee.js"
 );
 
 self.addEventListener('message', (event) => {
