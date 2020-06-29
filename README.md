@@ -36,7 +36,7 @@ Website should open in the browser
 
 ## Deployment
 
-Used GitHub Pages to deploy the react application, however, Github pages are available via https only if you use \*.guthub.com domain. Hence faced some difficulties problems after deploying the web app. ![Error](/readme_res/error.PNG)
+Used GitHub Pages to deploy the react application [HomePage](http://graciasrochelle.github.io/TSACodingChallengeReactApp), however, Github pages are available via https only if you use \*.github.com domain. Hence faced some problems after deploying the web app. ![Error](/readme_res/error.PNG)
 
 ## Reach out to me at:
 
