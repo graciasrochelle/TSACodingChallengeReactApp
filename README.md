@@ -36,7 +36,7 @@ Website should open in the browser
 
 ## Deployment
 
-Used GitHub Pages to deploy the react application, however, faced some difficulties integrating the API and web app. ![Error](/readme_res/error.PNG)
+Used GitHub Pages to deploy the react application ![HomePage](http://graciasrochelle.github.io/TSACodingChallengeReactApp), however, faced some difficulties integrating the API and web app. ![Error](/readme_res/error.PNG)
 
 ## Reach out to me at:
 
