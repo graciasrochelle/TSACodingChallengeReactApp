@@ -4,6 +4,7 @@ import "./ContactList.css";
 import { Button, Alert } from "react-bootstrap";
 
 export default function ContactTable(props) {
+	console.log(props.data);
 	const headers = props.data.displayContactDetails;
 	const maxColumnSpan = headers.length;
 	const rows = props.data.contacts;
@@ -22,9 +23,9 @@ export default function ContactTable(props) {
 						{rows && rows.length > 0 ? (
 							rows.map((r, i) => (
 								<tr key={r.id}>
-									<td key={i}>{r.fullName}</td>
-									<td key={i}>{r.email ? r.email : "---"}</td>
-									<td key={i}>
+									<td key={i + 0}>{r.fullName}</td>
+									<td key={i + 1}>{r.email ? r.email : "---"}</td>
+									<td key={i + 2}>
 										{r.phoneNumbers && r.phoneNumbers.join(" || ")}
 									</td>
 								</tr>
@@ -40,11 +41,7 @@ export default function ContactTable(props) {
 						)}
 						<tr>
 							<td colSpan={maxColumnSpan} className="align-contents">
-								<Button
-									variant="primary"
-									className="px-4"
-									href="/TSACodingChallengeReactApp/#/addContact"
-								>
+								<Button variant="primary" className="px-4" href="/addContact">
 									Add new contact
 								</Button>
 							</td>

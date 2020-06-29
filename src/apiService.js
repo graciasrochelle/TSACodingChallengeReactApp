@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import { mockData } from "./mockData";
 
-async function fetchContacts(url, setData) {
+async function fetchContacts(setData) {
 	try {
-		const res = await fetch(url);
+		const res = await fetch(`${process.env.REACT_APP_ALLCONTACT_ENDPOINT}`);
 		if (res.ok) {
 			const payload = await res.json();
 			setData({
 				data: payload,
 				isLoading: false,
+				isError: false,
 			});
 		} else {
 			alert("Using mock data!");
 			setData({
 				isLoading: false,
 				data: mockData,
+				isError: false,
 			});
 		}
 	} catch (e) {
@@ -22,40 +24,31 @@ async function fetchContacts(url, setData) {
 	}
 }
 
-export function useFetchContacts(url, defaultResponse) {
+export function useFetchContacts(defaultResponse) {
 	const [data, setData] = useState(defaultResponse);
 
 	useEffect(() => {
 		setTimeout(() => {
-			if (url) {
-				fetchContacts(url, setData);
-			}
+			fetchContacts(setData);
 		}, 1000);
-	}, [url]);
+	}, [data]);
 
 	return data;
 }
 
-export const addContact = async (endpoint = `/contact`, reqt) => {
-	const controller = new AbortController();
-	const signal = controller.signal;
-	setTimeout(() => {
-		controller.abort();
-	}, 1000);
+export const addContact = async (reqt) => {
 	try {
 		let isSuccess = false;
-		const res = fetch(
-			endpoint,
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-				},
-				body: JSON.stringify(reqt),
+		const res = fetch(`${process.env.REACT_APP_ADDCONTACT_ENDPOINT}`, {
+			method: "POST",
+			headers: {
+				contentType: "application/json; charset=utf-8",
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Headers":
+					"Origin, X-Requested-With, Content-Type, Accept",
 			},
-			{ signal }
-		)
+			body: JSON.stringify(reqt),
+		})
 			.then((res) => res.json())
 			.then(() => (res.ok ? (isSuccess = true) : (isSuccess = false)));
 		return isSuccess;

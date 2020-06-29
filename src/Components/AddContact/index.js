@@ -3,7 +3,7 @@ import * as apiService from "../../apiService";
 import "./AddContact.css";
 import { Button, Alert } from "react-bootstrap";
 
-function AddContact(props) {
+function AddContact() {
 	const {
 		value: fullName,
 		bind: bindFullName,
@@ -40,7 +40,7 @@ function AddContact(props) {
 					reqt,
 				});
 
-				apiService.addContact(props.addContactEndpoint, reqt);
+				const res = apiService.addContact(reqt);
 				resetEmail();
 				resetFullName();
 				resetPhoneNumbers();
@@ -50,7 +50,7 @@ function AddContact(props) {
 
 	return (
 		<>
-			<Alert key="request" variant="info">
+			<Alert key="request" variant="info" className="col-md-10">
 				New Contact Details: {JSON.stringify(request)}
 			</Alert>
 			<form className="form-container" onSubmit={handleSubmit}>

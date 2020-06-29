@@ -13,15 +13,9 @@ function App() {
 			<Header />
 			<div className="content">
 				<Switch>
-					<Route exact path="/">
-						<ContactList apiEndpoint={`/`} />
-					</Route>
-					<Route path="/addContact">
-						<AddContact apiEndpoint={`/contact`} />
-					</Route>
-					<Route path="*">
-						<NoMatch />
-					</Route>
+					<Route exact path="/" component={ContactList} />
+					<Route exact path="/addContact" component={AddContact} />
+					<Route path="*" component={NoMatch} />
 				</Switch>
 			</div>
 			<Footer />
