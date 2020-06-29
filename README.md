@@ -1,6 +1,6 @@
 # Contact App
 
-[Project Requirements](/readme_res/Code Challenge.pdf)
+![Project Requirements](/readme_res/Code Challenge.pdf)
 
 ## Aim of the project
 
@@ -8,7 +8,7 @@ A simple React Web Application that allows you to view and add contact informati
 
 ---
 
-[Watch the video](/readme_res/video.gif)
+![Watch the video](/readme_res/video.gif)
 
 ---
 
@@ -36,7 +36,7 @@ Website should open in the browser
 
 ## Deployment
 
-Used GitHub Pages to deploy the react application, however, faced some difficulties integrating the API and web app. [Error](/readme_res/error.PNG)
+Used GitHub Pages to deploy the react application, however, faced some difficulties integrating the API and web app. ![Error](/readme_res/error.PNG)
 
 ## Reach out to me at:
 
