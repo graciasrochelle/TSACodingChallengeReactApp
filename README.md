@@ -1,6 +1,6 @@
 # Contact App
 
-![Project Requirements](/readme_res/Code Challenge.pdf)
+![Project Requirements](https://github.com/graciasrochelle/TSACodingChallengeReactApp/blob/master/readme_res/Code%20Challenge.pdf)
 
 ## Aim of the project
 
